@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gen-parser": "nearleyc slovak.ne -o generated_parser.slovak"
+    "gen-parser": "nearleyc slovak.ne -o generated_parser.ko"
   },
   "keywords": [],
   "author": "",

@@ -6,7 +6,7 @@ let lexer = moo.compile({
   comment: /\/\/.*?$/,
   integer: /0|[1-9][0-9]*/,
   variable: ["nech","konstanta"],
-  keywords: ["pre","kym","ak"],
+  keywords: ["pre","pokial","ak"],
   string: /"(?:\\["\\]|[^\n"\\])*"/,
   lparen: "(",
   rparen: ")",
@@ -20,7 +20,7 @@ let lexer = moo.compile({
 
 main();
 async function main() {
-  const code = (await fs.readFile("example.slovak")).toString();
+  const code = (await fs.readFile("example.ko")).toString();
   lexer.reset(code);
   while (true) {
     const token = lexer.next();
