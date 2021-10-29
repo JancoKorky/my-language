@@ -19,7 +19,7 @@ I recommend to install *nearley* globaly as we want to use specific command from
 ## Project description
 In this section I will try to explain what files contains and how to generate parser.
 
-#### Lexer
+### Lexer
 In simple words Lexer changing textfile into separate tokens and in file `lexer.js` you can see Lexer a.k.a Tokenizer that is made using *Moo!* library. This library offer benefits such as saving line and collumn of each occurrence. It's still not complete as I'm working on changes. But for example you can see in file there are variables `nech` and `konstanta` what is slovak translatation of `let` and `const`.
 
 If you want to see exemple you can use command:
@@ -28,7 +28,7 @@ If you want to see exemple you can use command:
 
 That will process example.ko file.
 
-#### Parser
+### Parser
 In file `slovak.ne` is posible to define statements such as variable statement as you can see in file. At documentation `Nearly` recomend to use `_` dash as optional whitespace and `__` doubledash as mandatory whitespace.
 
 #### Generating parser
