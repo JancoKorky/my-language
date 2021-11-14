@@ -1,0 +1,21 @@
+{
+  "type": "var_assign",
+  "var_name": {
+    "type": "keyword",
+    "value": "nech",
+    "text": "nech",
+    "offset": 0,
+    "lineBreaks": 0,
+    "line": 1,
+    "col": 1
+  },
+  "value": {
+    "type": "integer",
+    "value": "45",
+    "text": "45",
+    "offset": 20,
+    "lineBreaks": 0,
+    "line": 1,
+    "col": 21
+  }
+}

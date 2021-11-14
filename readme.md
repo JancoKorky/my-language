@@ -41,4 +41,3 @@ that will create new file with name `generated_parser.ko`
 Or you can use command:
 
 ```nearleyc slovak.ne -o file_name_of_generated_parser```
-

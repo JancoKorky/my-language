@@ -1,12 +1,26 @@
+@{%
+const myLexer = require ("./lexer");
+%}
+
+@lexer myLexer
 statement
-    -> variable_assign
+    -> variable_assign {% id %}
 
 variable_assign
-    -> %variable _ "=" _ expression
+    -> %keyword __ %identifier _ "=" _ expression
+        {%
+            (data) => {
+                return {
+                    type: "var_assign",
+                    var_name: data[0],
+                    value: data[6],
+                }
+            }
+        %}
 
 expression
-    -> %string
-    | %integer
+    -> %string {% id %}
+    | %integer {% id %}
 
 # optional whitespace
 _ -> %whitespace:*
