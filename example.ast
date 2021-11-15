@@ -1,21 +1,73 @@
-{
-  "type": "var_assign",
-  "var_name": {
-    "type": "keyword",
-    "value": "nech",
-    "text": "nech",
-    "offset": 0,
-    "lineBreaks": 0,
-    "line": 1,
-    "col": 1
+[
+  {
+    "type": "var_assign",
+    "var_type": {
+      "type": "keyword",
+      "value": "nech",
+      "text": "nech",
+      "offset": 0,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 1
+    },
+    "var_name": {
+      "type": "identifier",
+      "value": "ugigi",
+      "text": "ugigi",
+      "offset": 5,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 6
+    },
+    "value": {
+      "type": "integer",
+      "value": "98",
+      "text": "98",
+      "offset": 13,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 14
+    }
   },
-  "value": {
-    "type": "integer",
-    "value": "45",
-    "text": "45",
-    "offset": 20,
-    "lineBreaks": 0,
-    "line": 1,
-    "col": 21
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "funk",
+      "text": "funk",
+      "offset": 17,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "integer",
+        "value": "48",
+        "text": "48",
+        "offset": 22,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 6
+      },
+      {
+        "type": "integer",
+        "value": "88",
+        "text": "88",
+        "offset": 25,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 9
+      },
+      {
+        "type": "identifier",
+        "value": "ugigi",
+        "text": "ugigi",
+        "offset": 28,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 12
+      }
+    ]
   }
-}
+]
