@@ -12,8 +12,8 @@
     },
     "var_name": {
       "type": "identifier",
-      "value": "ugigi",
-      "text": "ugigi",
+      "value": "premenna",
+      "text": "premenna",
       "offset": 5,
       "lineBreaks": 0,
       "line": 1,
@@ -23,50 +23,41 @@
       "type": "integer",
       "value": "98",
       "text": "98",
-      "offset": 13,
+      "offset": 16,
       "lineBreaks": 0,
       "line": 1,
-      "col": 14
+      "col": 17
     }
   },
   {
     "type": "fun_call",
     "fun_name": {
       "type": "identifier",
-      "value": "funk",
-      "text": "funk",
-      "offset": 17,
+      "value": "vypis",
+      "text": "vypis",
+      "offset": 20,
       "lineBreaks": 0,
       "line": 2,
       "col": 1
     },
     "arguments": [
       {
-        "type": "integer",
-        "value": "48",
-        "text": "48",
-        "offset": 22,
-        "lineBreaks": 0,
-        "line": 2,
-        "col": 6
-      },
-      {
-        "type": "integer",
-        "value": "88",
-        "text": "88",
-        "offset": 25,
-        "lineBreaks": 0,
-        "line": 2,
-        "col": 9
-      },
-      {
         "type": "identifier",
-        "value": "ugigi",
-        "text": "ugigi",
-        "offset": 28,
+        "value": "premenna",
+        "text": "premenna",
+        "offset": 26,
         "lineBreaks": 0,
         "line": 2,
-        "col": 12
+        "col": 7
+      },
+      {
+        "type": "string",
+        "value": "\"text\"",
+        "text": "\"text\"",
+        "offset": 36,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 17
       }
     ]
   }

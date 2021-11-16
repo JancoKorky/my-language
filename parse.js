@@ -12,6 +12,7 @@ async function main() {
   const code = (await fs.readFile(filename)).toString();
   const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar));
   parser.feed(code);
+  // console.log(parser.results)
   if (parser.results.length > 1) {
     console.log("My Error: ambigous grammar detected");
   } else if (parser.results.length == 1) {

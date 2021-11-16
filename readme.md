@@ -41,3 +41,10 @@ that will create new file with name `generated_parser.ko`
 Or you can use command:
 
 ```nearleyc slovak.ne -o file_name_of_generated_parser```
+
+That part is gonna be change |||||
+bcos i did generator and lexer you cant run again at all bcos it's exported and imported at generator or parser(dont remeber where)
+```node generate.js example.ast```
+then i did generator that takes `.ast` file(there are "tokes" i dont know how to call it) so the Korky code can be again converted to normal JS file and runned
+
+There i have to mention run.js that run all menioned things up there and right now working on runtime functions

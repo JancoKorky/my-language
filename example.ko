@@ -1,2 +1,18 @@
-nech ugigi = 98
-funk(48,88,ugigi)
+
+nech premenna = 98
+vypis(premenna, "text")
+konstanta sFunkciou = vypis("prvy",scitanie(5,5))
+nech f = () => 1
+
+
+konstanta a = 2
+konstanta b = 2
+konstanta x = (a, b) => scitanie(a,b)
+konstanta y = (a, b) => {
+    odcitanie(a,b)
+}
+
+konstanta z = (a) =>
+{
+    vypis(a)
+}

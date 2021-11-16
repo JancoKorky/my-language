@@ -12,6 +12,8 @@ let lexer = moo.compile({
   comma: ",",
   rpar: ")",
   lpar: "(",
+  lcurly: "{",
+  rcurly: "}",
   identifier: /[a-zA-Z][a-zA-Z_0-9]*/,
   newline: { match: /\r\n/, lineBreaks: true },
 });
