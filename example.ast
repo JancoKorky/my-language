@@ -217,8 +217,8 @@
         "type": "fun_call",
         "fun_name": {
           "type": "identifier",
-          "value": "rovnaju_sa",
-          "text": "rovnaju_sa",
+          "value": "rovne",
+          "text": "rovne",
           "offset": 164,
           "lineBreaks": 0,
           "line": 10,
@@ -229,19 +229,19 @@
             "type": "integer",
             "value": "1",
             "text": "1",
-            "offset": 175,
+            "offset": 170,
             "lineBreaks": 0,
             "line": 10,
-            "col": 15
+            "col": 10
           },
           {
             "type": "integer",
             "value": "2",
             "text": "2",
-            "offset": 177,
+            "offset": 172,
             "lineBreaks": 0,
             "line": 10,
-            "col": 17
+            "col": 12
           }
         ]
       },
@@ -255,7 +255,7 @@
               "type": "identifier",
               "value": "vypis",
               "text": "vypis",
-              "offset": 191,
+              "offset": 186,
               "lineBreaks": 0,
               "line": 11,
               "col": 10
@@ -265,7 +265,7 @@
                 "type": "string",
                 "value": "\"rovnaju sa\"",
                 "text": "\"rovnaju sa\"",
-                "offset": 197,
+                "offset": 192,
                 "lineBreaks": 0,
                 "line": 11,
                 "col": 16
@@ -284,7 +284,7 @@
               "type": "identifier",
               "value": "vypis",
               "text": "vypis",
-              "offset": 222,
+              "offset": 217,
               "lineBreaks": 0,
               "line": 12,
               "col": 10
@@ -294,10 +294,114 @@
                 "type": "string",
                 "value": "\"nerovnaju sa\"",
                 "text": "\"nerovnaju sa\"",
-                "offset": 228,
+                "offset": 223,
                 "lineBreaks": 0,
                 "line": 12,
                 "col": 16
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "ak",
+      "text": "ak",
+      "offset": 245,
+      "lineBreaks": 0,
+      "line": 15,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "fun_call",
+        "fun_name": {
+          "type": "identifier",
+          "value": "rovne",
+          "text": "rovne",
+          "offset": 254,
+          "lineBreaks": 0,
+          "line": 16,
+          "col": 5
+        },
+        "arguments": [
+          {
+            "type": "integer",
+            "value": "1",
+            "text": "1",
+            "offset": 260,
+            "lineBreaks": 0,
+            "line": 16,
+            "col": 11
+          },
+          {
+            "type": "integer",
+            "value": "1",
+            "text": "1",
+            "offset": 262,
+            "lineBreaks": 0,
+            "line": 16,
+            "col": 13
+          }
+        ]
+      },
+      {
+        "type": "lambda",
+        "parameters": [],
+        "body": [
+          {
+            "type": "fun_call",
+            "fun_name": {
+              "type": "identifier",
+              "value": "vypis",
+              "text": "vypis",
+              "offset": 277,
+              "lineBreaks": 0,
+              "line": 17,
+              "col": 11
+            },
+            "arguments": [
+              {
+                "type": "string",
+                "value": "\"true\"",
+                "text": "\"true\"",
+                "offset": 283,
+                "lineBreaks": 0,
+                "line": 17,
+                "col": 17
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "lambda",
+        "parameters": [],
+        "body": [
+          {
+            "type": "fun_call",
+            "fun_name": {
+              "type": "identifier",
+              "value": "vypis",
+              "text": "vypis",
+              "offset": 303,
+              "lineBreaks": 0,
+              "line": 18,
+              "col": 11
+            },
+            "arguments": [
+              {
+                "type": "string",
+                "value": "\"false\"",
+                "text": "\"false\"",
+                "offset": 309,
+                "lineBreaks": 0,
+                "line": 18,
+                "col": 17
               }
             ]
           }
@@ -311,27 +415,27 @@
       "type": "keyword",
       "value": "konstanta",
       "text": "konstanta",
-      "offset": 250,
+      "offset": 324,
       "lineBreaks": 0,
-      "line": 15,
+      "line": 21,
       "col": 1
     },
     "var_name": {
       "type": "identifier",
       "value": "a",
       "text": "a",
-      "offset": 260,
+      "offset": 334,
       "lineBreaks": 0,
-      "line": 15,
+      "line": 21,
       "col": 11
     },
     "value": {
       "type": "integer",
       "value": "2",
       "text": "2",
-      "offset": 264,
+      "offset": 338,
       "lineBreaks": 0,
-      "line": 15,
+      "line": 21,
       "col": 15
     }
   },
@@ -341,27 +445,27 @@
       "type": "keyword",
       "value": "konstanta",
       "text": "konstanta",
-      "offset": 267,
+      "offset": 341,
       "lineBreaks": 0,
-      "line": 16,
+      "line": 22,
       "col": 1
     },
     "var_name": {
       "type": "identifier",
       "value": "b",
       "text": "b",
-      "offset": 277,
+      "offset": 351,
       "lineBreaks": 0,
-      "line": 16,
+      "line": 22,
       "col": 11
     },
     "value": {
       "type": "integer",
       "value": "2",
       "text": "2",
-      "offset": 281,
+      "offset": 355,
       "lineBreaks": 0,
-      "line": 16,
+      "line": 22,
       "col": 15
     }
   },
@@ -371,18 +475,18 @@
       "type": "keyword",
       "value": "konstanta",
       "text": "konstanta",
-      "offset": 284,
+      "offset": 358,
       "lineBreaks": 0,
-      "line": 17,
+      "line": 23,
       "col": 1
     },
     "var_name": {
       "type": "identifier",
       "value": "x",
       "text": "x",
-      "offset": 294,
+      "offset": 368,
       "lineBreaks": 0,
-      "line": 17,
+      "line": 23,
       "col": 11
     },
     "value": {
@@ -392,18 +496,18 @@
           "type": "identifier",
           "value": "a",
           "text": "a",
-          "offset": 299,
+          "offset": 373,
           "lineBreaks": 0,
-          "line": 17,
+          "line": 23,
           "col": 16
         },
         {
           "type": "identifier",
           "value": "b",
           "text": "b",
-          "offset": 302,
+          "offset": 376,
           "lineBreaks": 0,
-          "line": 17,
+          "line": 23,
           "col": 19
         }
       ],
@@ -414,9 +518,9 @@
             "type": "identifier",
             "value": "scitanie",
             "text": "scitanie",
-            "offset": 308,
+            "offset": 382,
             "lineBreaks": 0,
-            "line": 17,
+            "line": 23,
             "col": 25
           },
           "arguments": [
@@ -424,18 +528,18 @@
               "type": "identifier",
               "value": "a",
               "text": "a",
-              "offset": 317,
+              "offset": 391,
               "lineBreaks": 0,
-              "line": 17,
+              "line": 23,
               "col": 34
             },
             {
               "type": "identifier",
               "value": "b",
               "text": "b",
-              "offset": 319,
+              "offset": 393,
               "lineBreaks": 0,
-              "line": 17,
+              "line": 23,
               "col": 36
             }
           ]
@@ -449,18 +553,18 @@
       "type": "keyword",
       "value": "konstanta",
       "text": "konstanta",
-      "offset": 323,
+      "offset": 397,
       "lineBreaks": 0,
-      "line": 18,
+      "line": 24,
       "col": 1
     },
     "var_name": {
       "type": "identifier",
       "value": "y",
       "text": "y",
-      "offset": 333,
+      "offset": 407,
       "lineBreaks": 0,
-      "line": 18,
+      "line": 24,
       "col": 11
     },
     "value": {
@@ -470,18 +574,18 @@
           "type": "identifier",
           "value": "a",
           "text": "a",
-          "offset": 338,
+          "offset": 412,
           "lineBreaks": 0,
-          "line": 18,
+          "line": 24,
           "col": 16
         },
         {
           "type": "identifier",
           "value": "b",
           "text": "b",
-          "offset": 341,
+          "offset": 415,
           "lineBreaks": 0,
-          "line": 18,
+          "line": 24,
           "col": 19
         }
       ],
@@ -492,9 +596,9 @@
             "type": "identifier",
             "value": "scitanie",
             "text": "scitanie",
-            "offset": 348,
+            "offset": 422,
             "lineBreaks": 0,
-            "line": 18,
+            "line": 24,
             "col": 26
           },
           "arguments": [
@@ -502,18 +606,18 @@
               "type": "identifier",
               "value": "b",
               "text": "b",
-              "offset": 357,
+              "offset": 431,
               "lineBreaks": 0,
-              "line": 18,
+              "line": 24,
               "col": 35
             },
             {
               "type": "identifier",
               "value": "a",
               "text": "a",
-              "offset": 359,
+              "offset": 433,
               "lineBreaks": 0,
-              "line": 18,
+              "line": 24,
               "col": 37
             }
           ]
@@ -524,9 +628,9 @@
             "type": "identifier",
             "value": "odcitanie",
             "text": "odcitanie",
-            "offset": 368,
+            "offset": 442,
             "lineBreaks": 0,
-            "line": 19,
+            "line": 25,
             "col": 6
           },
           "arguments": [
@@ -534,18 +638,18 @@
               "type": "identifier",
               "value": "a",
               "text": "a",
-              "offset": 378,
+              "offset": 452,
               "lineBreaks": 0,
-              "line": 19,
+              "line": 25,
               "col": 16
             },
             {
               "type": "identifier",
               "value": "b",
               "text": "b",
-              "offset": 380,
+              "offset": 454,
               "lineBreaks": 0,
-              "line": 19,
+              "line": 25,
               "col": 18
             }
           ]
@@ -556,9 +660,9 @@
             "type": "identifier",
             "value": "vypis",
             "text": "vypis",
-            "offset": 388,
+            "offset": 462,
             "lineBreaks": 0,
-            "line": 20,
+            "line": 26,
             "col": 5
           },
           "arguments": [
@@ -566,18 +670,18 @@
               "type": "identifier",
               "value": "a",
               "text": "a",
-              "offset": 404,
+              "offset": 478,
               "lineBreaks": 0,
-              "line": 21,
+              "line": 27,
               "col": 9
             },
             {
               "type": "identifier",
               "value": "b",
               "text": "b",
-              "offset": 416,
+              "offset": 490,
               "lineBreaks": 0,
-              "line": 22,
+              "line": 28,
               "col": 9
             }
           ]
@@ -591,18 +695,18 @@
       "type": "keyword",
       "value": "konstanta",
       "text": "konstanta",
-      "offset": 439,
+      "offset": 513,
       "lineBreaks": 0,
-      "line": 30,
+      "line": 36,
       "col": 1
     },
     "var_name": {
       "type": "identifier",
       "value": "z",
       "text": "z",
-      "offset": 449,
+      "offset": 523,
       "lineBreaks": 0,
-      "line": 30,
+      "line": 36,
       "col": 11
     },
     "value": {
@@ -612,9 +716,9 @@
           "type": "identifier",
           "value": "a",
           "text": "a",
-          "offset": 454,
+          "offset": 528,
           "lineBreaks": 0,
-          "line": 30,
+          "line": 36,
           "col": 16
         }
       ],
@@ -625,9 +729,9 @@
             "type": "identifier",
             "value": "vypis",
             "text": "vypis",
-            "offset": 468,
+            "offset": 542,
             "lineBreaks": 0,
-            "line": 32,
+            "line": 38,
             "col": 5
           },
           "arguments": [
@@ -635,9 +739,9 @@
               "type": "identifier",
               "value": "a",
               "text": "a",
-              "offset": 474,
+              "offset": 548,
               "lineBreaks": 0,
-              "line": 32,
+              "line": 38,
               "col": 11
             }
           ]

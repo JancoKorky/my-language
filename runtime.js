@@ -52,7 +52,7 @@ function vacsie(a, b) {
   a > b;
 }
 
-function a(cond1, cond2) {
+function tiez(cond1, cond2) {
   return cond1 && cond2;
 }
 

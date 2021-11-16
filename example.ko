@@ -7,9 +7,15 @@ nech f = () => 1
 
 // toto je moj koment
 
-ak(rovnaju_sa(1,2),
+ak(rovne(1,2),
     ()=> vypis("rovnaju sa"),
     ()=> vypis("nerovnaju sa")
+)
+
+ak(
+    rovne(1,1),
+    () => vypis("true"),
+    () => vypis("false")
 )
 
 konstanta a = 2

@@ -8,10 +8,15 @@ let f = function () {
    return 1
 };
 
-ak(rovnaju_sa(1, 2), function () {
+ak(rovne(1, 2), function () {
    return vypis("rovnaju sa")
 }, function () {
    return vypis("nerovnaju sa")
+})
+ak(rovne(1, 1), function () {
+   return vypis("true")
+}, function () {
+   return vypis("false")
 })
 const a = 2;
 const b = 2;
@@ -57,12 +62,36 @@ function mocnina(x, y) {
   return Math.pow(x, y);
 }
 
-function rovnaju_sa(a, b) {
+function rovne(a, b) {
   return a === b;
 }
 
-function alebo(cond1,cond2) {
-    return cond1 || cond2
+function rozne(a, b) {
+  return a != b;
+}
+
+function vacsie_rovne(a, b) {
+  return a >= b;
+}
+
+function mensie_rovne(a, b) {
+  return a <= b;
+}
+
+function mensie(a, b) {
+  a < b;
+}
+
+function vacsie(a, b) {
+  a > b;
+}
+
+function tiez(cond1, cond2) {
+  return cond1 && cond2;
+}
+
+function alebo(cond1, cond2) {
+  return cond1 || cond2;
 }
 
 function ak(condition, consequent, alternate) {
