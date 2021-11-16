@@ -24,7 +24,7 @@ In simple words Lexer changing textfile into separate tokens and in file `lexer.
 
 This `lexer` is exported, so in project you can see "require" at file `slovak.ne` where you can see parser.
 
-### Parser
+### Grammar and Parser
 In file `slovak.ne` you can see defined grammar that will `nearly` parse. What you can see is for example statement assign
 ```
 statements
@@ -43,22 +43,91 @@ statement
     | %comment {% id %}
 ```
 
-Next to mention at documentation `Nearly` recomend to use`_` dash as optional whitespace and `__` doubledash asmandatory whitespace. Or `_ml` and `__lb` as 
+Next to mention at documentation `Nearly` recomend to use`_` dash as optional whitespace and `__` doubledash asmandatory whitespace. Or `_ml` and `__lb` as optional newline and line-break.
 
 #### Generating parser
-For generation parser you can use script:
+For compiling grammar you can use script:
 
 ```node run gen-parser```
 
-that will create new file with name `generated_parser.ko`
+that will create new parser file with name `generated_parser.ko`
 
 Or you can use command:
 
-```nearleyc slovak.ne -o file_name_of_generated_parser```
+```nearleyc slovak.ne -o [your_file_name_of_generated_parser]```
 
-That part is gonna be change |||||
-bcos i did generator and lexer you cant run again at all bcos it's exported and imported at generator or parser(dont remeber where)
+This is very important to do if you change something in `.ne` file. Or the changes will be not applied and the next section will not work properly.
+
+##### Parser
+In `parse.js` is your Korky code(`example.ko`) transformed into `.ast` file with use of `slovak.ne` grammar(rule) that nearly need.
+This `.ast` file contains informations of each type of grammar(tokens) for example:
+```
+{
+    "type": "var_assign",
+    "var_type": {
+      "type": "keyword",
+      "value": "nech",
+      "text": "nech",
+      "offset": 2,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 1
+    },
+    "var_name": {
+      "type": "identifier",
+      "value": "premenna",
+      "text": "premenna",
+      "offset": 7,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 6
+    },
+    "value": {
+      "type": "integer",
+      "value": "98",
+      "text": "98",
+      "offset": 18,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 17
+    }
+  },
+```
+This `.ast` file we need for generator that will translate `.ast` file to normal `.js` file that nodejs can run.
+
+#### Making Generator
+Generator checking all the compiled grammar informations and translate it to real runable JavaScript code. This generator you can see in file `generate.js`. To use generator you can run command 
 ```node generate.js example.ast```
-then i did generator that takes `.ast` file(there are "tokes" i dont know how to call it) so the Korky code can be again converted to normal JS file and runned
 
-There i have to mention run.js that run all menioned things up there and right now working on runtime functions
+#### All together
+If you don't want to waste time with all commands there is `run.js` which contains whole process.
+Keep in mind when you change something in `.ne` file you have to run command
+
+`node run gen-parser`
+
+and after that you can use mentioned `run.js` file with command:
+
+`node run.js example.ko`
+
+where `example.ko` is you Korky code.
+
+## How Korky language looks
+As we mentioned you can use Slovak language to write code.
+##### Variables
+`nech premenna = 1` in Korky
+`let premenna = 1` in JavaScript
+
+Similar with constant
+`konstanta a = 5` in Korky
+`const a = 5` in JavaScript
+
+Also u can use lambda function and assign it to variable see:
+`konstanta b = () => vypis("Ahoj svet!")`
+##### Functions
+`(a,b) => vypis(scitanie(a,b))`
+will look in javascript as:
+```
+function (a,b) { 
+    return vypis(scitanie(a,b))
+    }
+```
