@@ -5,7 +5,7 @@ const myLexer = require ("./lexer");
 @lexer myLexer
 
 statements
-    -> _ml statement (_ml statement _):*
+    -> _ml statement (__lb statement _):* _ml
         {%
             (data) => {
                 const repeated = data[2];
@@ -17,10 +17,11 @@ statements
 statement
     -> variable_assign {% id %}
     | fun_call {% id %}
+    | %comment {% id %}
 
 
 fun_call
-    -> %identifier %lpar _ (arg_list):? _ %rpar
+    -> %identifier %lpar _ml (arg_list _ml):? %rpar
         {%
             (data) => {
                 return{
@@ -51,7 +52,7 @@ arg_list
                 return [data[0]]
             }
         %}
-    | arg_list _ %comma _ expression
+    | arg_list _ml %comma _ml expression
         {%
             (data) => {
                 return [...data[0], data[4]]
@@ -59,7 +60,7 @@ arg_list
         %}
 
 lambda 
-    -> %lpar _ (param_list _):? %rpar _ %fatarrow _ lambda_body
+    -> %lpar _ (param_list _):? %rpar _ %fatarrow _ml lambda_body
     {%
         (data) => {
             return {
@@ -81,10 +82,10 @@ param_list
         %}
 
 lambda_body
-    -> %lcurly _ %newline statements %newline _ %rcurly
+    -> %lcurly statements %rcurly
         {%
             (data) => {
-                return data[3];
+                return data[1];
             }
         %}
     | expression

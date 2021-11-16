@@ -1,18 +1,35 @@
 
 nech premenna = 98
 vypis(premenna, "text")
-konstanta sFunkciou = vypis("prvy",scitanie(5,5))
+konstanta sFunkciou = ()=> vypis("prvy",scitanie(5,5))
+sFunkciou()
 nech f = () => 1
 
+// toto je moj koment
+
+ak(rovnaju_sa(1,2),
+    ()=> vypis("rovnaju sa"),
+    ()=> vypis("nerovnaju sa")
+)
 
 konstanta a = 2
 konstanta b = 2
 konstanta x = (a, b) => scitanie(a,b)
-konstanta y = (a, b) => {
-    odcitanie(a,b)
+konstanta y = (a, b) => {scitanie(b,a)
+     odcitanie(a,b)
+    vypis(
+        a,
+        b
+    )
+
+
 }
+
+
 
 konstanta z = (a) =>
 {
     vypis(a)
 }
+
+

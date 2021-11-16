@@ -10,7 +10,7 @@ async function main() {
   const astJson = (await fs.readFile(filename)).toString();
   const runtimeJs = (await fs.readFile("runtime.js")).toString();
   const statements = JSON.parse(astJson);
-  const jsCode = generateJsForStatements(statements) + "\n" + runtimeJs;
+  const jsCode = generateJsForStatements(statements) + "\n\n" + runtimeJs;
   const outputFilename = filename.replace(".ast", ".js");
   await fs.writeFile(outputFilename, jsCode);
   console.log(`Wrote file ${outputFilename}`);
@@ -52,9 +52,31 @@ function generateJsForStatementOrExpr(node) {
     return node.value;
   } else if (node.type === "identifier") {
     return node.value;
+  } else if (node.type === "lambda") {
+    const paramList = node.parameters.map((param) => param.value).join(", ");
+    const jsBody = node.body
+      .map((arg, i) => {
+        const jsCode = generateJsForStatementOrExpr(arg);
+        if (i === node.body.length - 1) {
+          return "return " + jsCode;
+        } else {
+          return jsCode;
+        }
+      })
+      .join(";\n");
+    return `function (${paramList}) {\n${indent(jsBody)}\n}`;
+  } else if (node.type === "comment") {
+    return "";
   } else {
     throw new Error(`Unhandled AST node type with name: ${node.type}`);
   }
+}
+
+function indent(code) {
+  return code
+    .split("\n")
+    .map((line) => "   " + line)
+    .join("\n");
 }
 
 main().catch((err) => console.log(err.stack));
