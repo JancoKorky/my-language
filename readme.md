@@ -115,10 +115,13 @@ where `example.ko` is you Korky code.
 As we mentioned you can use Slovak language to write code.
 ##### Variables
 `nech premenna = 1` in Korky
+
 `let premenna = 1` in JavaScript
 
 Similar with constant
+
 `konstanta a = 5` in Korky
+
 `const a = 5` in JavaScript
 
 Also u can use lambda function and assign it to variable see:
